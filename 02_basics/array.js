@@ -8,7 +8,7 @@ const myarr=new Array(1,2,3,4,5)
 myarr.push(6)
 myarr.pop()
 // console.log(myarr);
-myarr.unshift(-1)
+myarr.unshift(-1) // -1 is the value 
 // console.log(myarr); // insert at start index
 myarr.shift(); //pop at start
 
