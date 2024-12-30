@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li')
+        li.innerHTML =`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("ruby")  //not optimised in large no. of list
+    function Optimumlang(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    Optimumlang("Golang")
+    //Edit
+    const secLang=document.querySelector("li:nth-child(2)") //1st child Javacript,2nd child Python
+    //Method 0
+    //secLang.innerHTML="MOjo"
+    //Method 1
+    const newLi=document.createElement('li')
+    newLi.textContent ="Mojo"
+    secLang.replaceWith(newLi)
+    //Method2
+    // const newLi=document.createElement('li')
+    // newLi.appendChild(document.createTextNode("AEsa"))
+    // secLang.replaceWith(newLi)
+
+    //edit
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>Typescript</li>'
+
+    //remove
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
