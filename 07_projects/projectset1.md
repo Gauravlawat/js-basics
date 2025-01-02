@@ -64,3 +64,16 @@ form.addEventListener('submit',function(e){
   }
 });
 ```
+## propject 3
+```javascript
+
+const clock = document.getElementById('clock');
+// const clock =document.querySelector('#clock')
+
+// run at given intervals, 1000 is time in ms
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+```
