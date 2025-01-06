@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai with Gaurav</h1>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+    //set tiemout if we need to print something after a time
+    const sayName=function(){
+        console.log("Soni ji");
+    }
+    const changeName=function(){
+        document.querySelector('h1').innerHTML="best JS series"
+    }
+    setTimeout(sayName,1000) //shows Soni ji after 1sec on console
+    const changeMe=setTimeout(changeName,2000) //set time out shows delay of time in milisecond
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe) // stops the change name function
+        console.log("Stopped");
+    })
+</script>
+</html>
