@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function init(){
+    //     let name="browser"
+    //     // console.log(secret); //error
+    //     function innerOne() {
+    //         let secret="my123"
+    //         console.log(("inner1",name));
+    //     }
+    //     function innerTwo() {
+    //         console.log(("inner2",name));
+    //         // console.log(secret); //error
+            
+    //     }
+    //     innerOne()
+    //     innerTwo()
+    // }
+    // init()
+    // function makefunc(){
+    //     let name="Mozilla"
+       
+    //     function display() {
+           
+    //         console.log(name);
+    //     }
+    //     return display
+    // }
+    // const  myfunc=makefunc() // whole lexical scope of makefunc gets stored in myfunc
+    // myfunc()  
+</script>
+<script>
+    // document.getElementById('orange').onclick=function()
+    // {
+    //     document.body.style.backgroundColor ='orange' 
+    // }
+    // document.getElementById('green').onclick=function()
+    // {
+    //     document.body.style.backgroundColor ='green' 
+    // }  //lengthy process
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor =`${color}`
+        return function(){
+            document.body.style.backgroundColor =`${color}`
+        }
+    }
+    document.getElementById('orange').onclick=clickHandler("orange") // executed as soon as page opens without click if return function not written
+    document.getElementById('green').onclick=clickHandler("green")
+</script>
+</html>
